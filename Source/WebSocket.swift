@@ -21,7 +21,6 @@
 
 import Foundation
 import CoreFoundation
-import Security
 
 public let WebsocketDidConnectNotification = "WebsocketDidConnectNotification"
 public let WebsocketDidDisconnectNotification = "WebsocketDidDisconnectNotification"
