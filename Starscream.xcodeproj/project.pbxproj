@@ -19,6 +19,9 @@
 		5C13600A1C473BEF00AA3A01 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1360011C473BEF00AA3A01 /* WebSocket.swift */; };
 		5CADAB511BEBD068005DE2F0 /* StarscreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E7A0119D48C2F006071F7 /* StarscreamTests.swift */; };
 		6B3E7A0319D48C2F006071F7 /* StarscreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E7A0119D48C2F006071F7 /* StarscreamTests.swift */; };
+		B5DCE3821D395C65007932AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCE3811D395C65007932AC /* Security.framework */; };
+		B5DCE3831D395C6C007932AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCE3811D395C65007932AC /* Security.framework */; };
+		B5DCE3841D395C6D007932AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCE3811D395C65007932AC /* Security.framework */; };
 		D9C3E36A19E48FF1009FC285 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C3E35F19E48FF1009FC285 /* Starscream.framework */; };
 		D9C3E37819E4903F009FC285 /* StarscreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3E7A0119D48C2F006071F7 /* StarscreamTests.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,7 @@
 		6B3E79F119D48B7F006071F7 /* Starscream iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Starscream iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3E7A0019D48C2F006071F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B3E7A0119D48C2F006071F7 /* StarscreamTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarscreamTests.swift; sourceTree = "<group>"; };
+		B5DCE3811D395C65007932AC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		D9C3E35F19E48FF1009FC285 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C3E36919E48FF1009FC285 /* Starscream OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Starscream OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DCE3821D395C65007932AC /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DCE3841D395C6D007932AC /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DCE3831D395C6C007932AC /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +117,7 @@
 				6B3E79E819D48B7F006071F7 /* Starscream */,
 				6B3E79FF19D48C2F006071F7 /* Tests */,
 				6B3E79E719D48B7F006071F7 /* Products */,
+				B5DCE3801D395C64007932AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +161,14 @@
 				6B3E7A0119D48C2F006071F7 /* StarscreamTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		B5DCE3801D395C64007932AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5DCE3811D395C65007932AC /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
