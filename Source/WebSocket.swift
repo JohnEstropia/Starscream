@@ -189,7 +189,7 @@ public class WebSocket: NSObject, StreamDelegate {
 
      - Parameter forceTimeout: Maximum time to wait for the server to close the socket.
      */
-    public func disconnect(forceTimeout: TimeInterval? = nil) {
+    public func disconnect(_ forceTimeout: TimeInterval? = nil) {
         switch forceTimeout {
         case .some(let seconds) where seconds > 0:
             callbackQueue.after(when: DispatchTime.now() + Double(Int64(seconds * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) { [weak self] in
@@ -286,7 +286,7 @@ public class WebSocket: NSObject, StreamDelegate {
             key += "\(Character(uni))"
         }
         let data = key.data(using: String.Encoding.utf8)
-        let baseKey = data?.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
+        let baseKey = data?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
         return baseKey!
     }
 
@@ -439,7 +439,7 @@ public class WebSocket: NSObject, StreamDelegate {
             let data = inputQueue[0]
             var work = data
             if let fragBuffer = fragBuffer {
-                var combine = NSData(data: fragBuffer) as Data
+                var combine = fragBuffer
                 combine.append(data)
                 work = combine
                 self.fragBuffer = nil
